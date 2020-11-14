@@ -27,6 +27,8 @@ public class DocumentoExcel implements Imprimible{
     
     @Override
     public String imprimir() {
+        String abc=null;
+        //abc.substring(5);
         return "Imprimiendo desde un archivo Excel";
     }
     
