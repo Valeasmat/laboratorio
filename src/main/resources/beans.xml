@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"
+        default-init-method="iniciar" default-destroy-method="destruir"
+>
+    
+    <!--<context:annotation-config></context:annotation-config>-->
+    <context:component-scan base-package="edu.cibertec.capitulo2"></context:component-scan>
+    
+    <!--<bean id="holaMundoBean" class="edu.cibertec.capitulo2.beans.HolaMundo" scope="prototype">
+        <property name="saludo" value="Hola Mundo!"></property>
+    </bean>-->
+    <bean id="impresoraServiceBean" class="edu.cibertec.capitulo2.service.ImpresoraService">
+        <!--<property name="documento" ref="documentoExcel"></property>-->
+        <!--<constructor-arg ref="documentoExcel"></constructor-arg>-->
+    </bean>
+    <bean id="documentoExcel" class="edu.cibertec.capitulo2.beans.DocumentoExcel"></bean>
+    <bean id="documentoTexto" class="edu.cibertec.capitulo2.beans.DocumentoTexto" lazy-init="true"></bean>
+</beans>
